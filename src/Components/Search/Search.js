@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useParams } from 'react-router';
 import Navbar from '../Navbar/Navbar';
 
 const Search = () => {
@@ -8,7 +9,7 @@ const Search = () => {
   const [destination, setDestination] = useState({})
   const { register, handleSubmit } = useForm();
   const onSubmit = data => setDestination(data);
-  const transport = window.location.href.split('/').pop()
+  let {transport} = useParams()
 
   useEffect(() => {
     fetch('https://api.mocki.io/v1/47abc50f')
@@ -47,6 +48,10 @@ const Search = () => {
                 <div className="mb-3">
                   <label htmlFor="place2" className="form-label">Go to</label>
                   <input type="text" name="place2" className="form-control" id="place2" ref={register} required />
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="date">Pick a date</label>
+                  <input type="date" name="date" id="..." className="form-control"/>
                 </div>
                 <input type="submit" value="Search" className="btn btn-success btn-lg" />
               </form>

@@ -33,7 +33,9 @@ const Login = () => {
         })
         .catch((error) => {
           var errorMessage = error.message;
-          console.log(errorMessage);
+          let newUser = {...userData}
+          newUser.error = errorMessage
+          setUserData(newUser)
         });
     }
 
@@ -93,6 +95,7 @@ const Login = () => {
             </div>
           }
           <div className="mb-3">
+            {userData.error && <p style={{color: 'red'}}>{userData.error}</p> }
             <p className="text-center">Already have an account? <input type="checkbox" name="login" id="" onClick={() => setLogin(!login)} /> Log in</p>
           </div>
           <p className="text-center">Or</p>
@@ -100,7 +103,9 @@ const Login = () => {
             <img src={image} alt="" style={{ width: '10%', borderRadius: '50%'}}/>
             <span onClick={handleGoogleSignIn} style={{cursor: 'pointer'}}>Sign up with google</span>
           </div>
-            <input type="submit" className="btn btn-success btn-lg" />
+          <div className="text-center">
+            <input type="submit" className="btn btn-success btn-lg " />
+          </div>
         </form>
       </div>
     </div>

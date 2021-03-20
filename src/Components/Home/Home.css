@@ -1,0 +1,12 @@
+.home {
+  margin-top: 10%;
+}
+
+@media only screen and (max-width: 540px){
+  .home {
+    margin-top: 0px;
+  }
+  .col {
+    height: 33vh;
+  }
+}

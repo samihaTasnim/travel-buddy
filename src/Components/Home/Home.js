@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import image from '../../images/bg.jpg'
 import { Link } from 'react-router-dom';
+import './Home.css'
 
 const Home = () => {
   const [ride, setRide] = useState([])
@@ -11,11 +12,12 @@ const Home = () => {
       .then(data => setRide(data))
   }, [])
 
+
   return (
-    <div style={{ backgroundImage: `url(${image})`, height: '100vh', backgroundSize: 'cover'}}>
+    <div style={{ backgroundImage: `url(${image})`, height: '100vh', backgroundSize: 'cover' }}>
       <Navbar></Navbar>
-      <div className="container" style={{marginTop: '10%'}}>
-        <div className="row row-cols-1 row-cols-md-4 g-4">
+      <div className="container home">
+        <div className="row row-cols-md-4 g-2 row-clos-sm-2 card-container">
           {
             ride.map(x => (
               <div className="col">
