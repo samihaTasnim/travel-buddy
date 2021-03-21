@@ -14,6 +14,7 @@ import Search from './Components/Search/Search';
 import Blog from './Components/Blog/Blog';
 import Nomatch from './Components/Nomatch/Nomatch';
 import Contact from './Components/Contact/Contact';
+import Destination from './Components/Destination/Destination';
 
 export const UserContext = createContext()
 
@@ -33,6 +34,9 @@ function App() {
           <PrivateRoute path="/search/:transport">
             <Search></Search>
           </PrivateRoute>
+          <Route path="/destination">
+            <Destination></Destination>
+          </Route>
           <Route path="/blog">
             <Blog></Blog>
           </Route>
