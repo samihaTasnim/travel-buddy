@@ -34,8 +34,22 @@ const Search = () => {
                 <div className="card" >
                   <img src={vehicle.image} className="card-img-top" alt="..." />
                   <div className="card-body">
-                    <p className="card-text">Transport: {vehicle.name}</p>
-                    <p className="card-text">Cost: $67</p>
+                    <span className="card-text m-4">Transport: {vehicle.name}</span>
+                    <span className="card-text">Cost: $67</span>
+                  </div>
+                </div>
+                <div className="card" >
+                  <img src={vehicle.image} className="card-img-top" alt="..." />
+                  <div className="card-body">
+                    <span className="card-text m-4">Transport: {vehicle.name}</span>
+                    <span className="card-text">Cost: $67</span>
+                  </div>
+                </div>
+                <div className="card" >
+                  <img src={vehicle.image} className="card-img-top" alt="..." />
+                  <div className="card-body">
+                    <span className="card-text m-4">Transport: {vehicle.name}</span>
+                    <span className="card-text">Cost: $67</span>
                   </div>
                 </div>
               </div>
@@ -51,7 +65,7 @@ const Search = () => {
                 </div>
                 <div className="mb-3">
                   <label htmlFor="date">Pick a date</label>
-                  <input type="date" name="date" id="..." className="form-control"/>
+                  <input type="date" name="date" id="..." className="form-control" required/>
                 </div>
                 <input type="submit" value="Search" className="btn btn-success btn-lg" />
               </form>
