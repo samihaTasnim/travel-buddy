@@ -7,7 +7,7 @@ import './Home.css'
 const Home = () => {
   const [ride, setRide] = useState([])
   useEffect(() => {
-    fetch('https://api.mocki.io/v1/47abc50f')
+    fetch('https://mocki.io/v1/a1359f32-9b56-4cd3-89d7-d2dc740c6067')
       .then(res => res.json())
       .then(data => setRide(data))
   }, [])
